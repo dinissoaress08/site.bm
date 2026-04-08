@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    background: #fff9fb;
+    font-family: 'Poppins', sans-serif;
+    color: #6a5c5c;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #b38989;
+}
+
+/* TEXTO CURVO */
+.curve-text {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    display: block;
+    font-size: 20px;
+    fill: #b38989;
+}
+
+/* 🔥 TÍTULO COM SOMBRA */
+h1.cursive {
+    font-family: 'Great Vibes', cursive;
+    font-size: 70px;
+    margin: 10px 0;
+    color: #d4a3a3;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* 🔥 DATA COM RETÂNGULO */
+.date {
+    font-size: 20px;
+    background: white;
+    color: #e7b8c9;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+/* 🔥 TÍTULO MEMÓRIAS */
+section h2:first-of-type {
+    background: white;
+    color: #e7b8c9;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* ANIMAÇÃO */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FLOAT */
+.floating {
+    position: absolute;
+    z-index: -1;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+.cloud { width: 200px; }
+.bear { width: 140px; }
+
+/* GALERIA */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.polaroid {
+    background: white;
+    padding: 10px;
+    width: 200px;
+    height: 260px;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+}
+
+.polaroid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* TIMELINE */
+.timeline {
+    max-width: 700px;
+    margin: auto;
+}
+
+.time-item {
+    margin: 20px 0;
+    padding: 15px;
+    border-left: 3px solid #e0b8b8;
+    text-align: left;
+}
+
+/* BOTÕES */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #e7b8c9;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+/* EVENT DETAILS */
+.event-details {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.event-card {
+    background: #f7cfd8;
+    padding: 40px;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.event-title {
+    background: #b38989;
+    color: white;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.event-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.calendar {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 260px;
+}
+
+.days, .numbers {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 5px;
+}
+
+.highlight {
+    background: #e7b8c9;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.event-bear {
+    width: 220px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.see-you {
+    margin-top: 30px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    color: white;
+}
+
+/* RODAPÉ */
+.footer {
+    background: #b38989;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 430px) {
+
+    h1.cursive {
+        font-size: 45px;
+    }
+
+    .date {
+        font-size: 16px;
+    }
+
+    .curve-text {
+        max-width: 300px;
+        font-size: 16px;
+    }
+
+    .polaroid {
+        width: 160px;
+        height: 220px;
+    }
+
+    .polaroid img {
+        height: 140px;
+    }
+
+    .event-card {
+        padding: 25px;
+    }
+
+    .calendar {
+        width: 100%;
+    }
+
+    .event-bear {
+        width: 160px;
+    }
+
+    .cloud {
+        width: 120px;
+    }
+
+    .bear {
+        width: 90px;
+    }
+}
